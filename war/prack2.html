@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Home work Khasanov A.R.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="bootsrap/css/carousel.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+ 
+  $( function() {
+    $('#calc').click( function() {
+    	var var1 = $('#var1').val();
+    	var var2 = $('#var2').val();
+    	var operation = $('#operation').val();
+    	
+      $('#result').load( "/lab?i=1&var1="+var1+"&var2="+var2+"&operation="+operation);
+    } );
+ 
+    $('#hello_text').click( function() {
+        $('#say_hello').load( "/lab?i=0");
+      } );
+    
+  } );
+ 
+</script>
+    
+  </head>
+<!-- NAVBAR -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand">Хасанов А.Р.</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Главная</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Практические работы<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="prack2.html">№2</a></li>
+                    <li><a href="prack3.html">№3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+		<div class="well">
+		<button id="hello_text">Сказать привет</button>
+		<div id="say_hello"></div>
+		</div>
+		
+		<div class="well">
+		<form>
+			<p>Введите числа и выберите операцию:</p>
+			<input id="var1" type="text"/>
+			<select id="operation">
+			<option value="0">+</option>
+			<option value="1">-</option>
+			<option value="2">*</option>
+			<option value="3">:</option>
+			</select>
+			<input id="var2" type="text"/>
+		</form> 
+			
+			<button id="calc">Посчитать</button>
+			
+			<p>Результат операции: <b><span style="color:red" id="result"></span></b></p>
+		
+		</div>
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2014 Хасанов А.Р. &middot;</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://bootstrap-3.ru/assets/js/docs.min.js"></script>
+  </body>
+</html>
